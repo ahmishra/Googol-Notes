@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Googol Notes - {{ object.title }} Details 
+{% endblock title %}
+
+{% block content %}
+<h2>{{ object.title }} Details</h2>
+<strong>Tagged: {{ object.related_tag }}</strong>
+
+<p>Date Created: {{ object.date }}</p>
+<hr style="background: gray;">
+<p><br>
+{{ object.note_html|safe|linebreaks }}
+</p>
+<br><hr style="background: white;"><br>
+<a href="{% url 'app:update-note' pk=object.pk %}" style="color: white"><button class="btn btn-lg btn-outline-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button></a>
+<a href="{% url 'app:delete-note' pk=object.pk %}" style="color: white"><button class="btn btn-lg btn-outline-danger"><i class="fa fa-trash" aria-hidden="true"></i></button></a>
+<br><br>
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title  %}Googol Notes- All Your Notes{% endblock title  %}
+
+{% block content %}
+
+<div class="row">
+{% for object in object_list %}
+	{% if object.user == user %}
+	<div class="col-sm-6">
+		<div class="card">
+		  <div class="card-body">
+		    <h5 class="card-title">{{ object.title }}</h5>
+		    <h6 class="card-subtitle mb-2 text-muted">{{ object.related_tag }}</h6><br>
+		    <a href="{% url 'app:detail-note' pk=object.pk %}" class="card-link btn btn-sm btn-outline-primary">View</a>
+		    <a href="{% url 'app:delete-note' pk=object.pk %}" class="card-link btn btn-sm btn-outline-danger">Delete</a><br><br>
+		    <small class="card-subtitle mb-2 text-muted">{{ object.date }}</small>
+		  </div>
+		</div><br><br>
+	</div>
+	{% endif %}
+	{% empty %}
+	<div class="container center-text">
+		<h3>There Are No Notes In Your Account Right Now.</h3>
+	</div>
+{% endfor %}
+</div>
+
+<div class="new-note">
+	<a href="{% url 'app:create-note' %}"><button class="btn btn-lg new-note-btn"><i style="color: white;" class="fa fa-plus" aria-hidden="true"></i></button></a>
+</div>
+{% endblock content %}

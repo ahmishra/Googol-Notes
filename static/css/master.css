@@ -1,0 +1,76 @@
+/* Basic Setup */
+body {
+	font-family: 'IBM Plex Sans', sans-serif;
+	background-color: #202124;
+	color: whitesmoke;
+
+}
+.container {
+	margin-top: 50px;
+}
+label {
+	font-family: 'Alata', sans-serif;
+}
+p {
+	font-family: 'Alata', sans-serif;
+}
+
+/* Inputs  */
+#id_username, #id_password1, #id_password2, #id_password, #id_title, #id_note, #id_related_tag {
+	background: transparent;
+	border: none;
+	width: 100%;
+	outline: none;
+	color: whitesmoke;
+	border-bottom: 1px solid darkorchid;
+}
+
+.btn {
+	font-weight: 900;
+}
+
+/* New Note Button */
+.new-note-btn {
+	background: darkorchid;
+	color: white;
+	border-radius: 50px;
+	box-shadow: 0px 0px 10px 2px #000;
+}
+.new-note-btn:hover {
+	color: white;
+	box-shadow: 0px 0px 20px 5px #000;
+}
+.new-note {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+
+
+
+/* Card */
+.card {
+	color: black;
+	font-family: 'Alata' ,sans-serif;
+}
+
+.card-text {
+	position:relative;
+  width:200px;
+  max-height:6em;
+  overflow:hidden;
+}
+
+.center-text {
+	text-align: center;
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+iframe {
+	width: 100%;
+}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title  %}Googol Notes- Login Portal{% endblock title  %}
+
+{% block content %}
+<h2>Log Back Into Your Account!</h2><hr><br>
+<form method="POST">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value='Login' class="btn btn-outline-success">
+</form>
+{% endblock content %}

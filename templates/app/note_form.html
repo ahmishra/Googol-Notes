@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Googol Notes -  Create A New Note{% endblock title %}
+
+
+{% block content %}
+<h2></h2>
+<div class="container">
+	<form method="POST">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<br><br>
+		<input type="submit" value='Create' class="btn btn-outline-primary">
+	</form>
+</div>
+{% endblock content %}
