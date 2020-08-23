@@ -8,7 +8,7 @@ Confirm Your Deletion
 		<h3>Are You Sure You Want To Delete "{{ object }}" ?</h3><br>
 		<form method="POST">
 			{% csrf_token %}
-			<a autofocus href="{% url 'app:all-notes' %}" class="btn btn btn-primary">No Take Me Back</a><br><br>
+			<a autofocus href="{% url 'app:detail-note' pk=object.pk %}" class="btn btn btn-primary">No Take Me Back</a><br><br>
 			<input type="submit" value='Delete' class="btn btn-sm btn-outline-danger">
 		</form>
 </div>

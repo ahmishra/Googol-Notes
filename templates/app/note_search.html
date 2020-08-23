@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Googol Notes - Search Notes
+{% endblock title %}
+
+{% block content %}
+<form method="GET" style="margin-left: 15px;">
+  <div class="form-group">
+    <label for="q">Search A Note Tag</label>
+    <input type="text" class="form-control" id="q" name="q">
+  </div>
+  <button type="submit" class="btn btn-primary">Search</button>
+</form><br><br>
+
+
+<div class="row" style="margin-left: 1px;">
+{% for result in results %}
+{% if result.user == user %}
+<div class="col-sm-6">
+	<div class="card">
+	  <div class="card-body">
+	    <h5 class="card-title">{{ result.title }}</h5>
+	    <h6 class="card-subtitle mb-2 text-muted">{{ result.related_tag }}</h6><br>
+	    <a href="{% url 'app:detail-note' pk=result.pk %}" class="card-link btn btn-sm btn-outline-primary">View</a>
+	    <a href="{% url 'app:delete-note' pk=result.pk %}" class="card-link btn btn-sm btn-outline-danger">Delete</a><br><br>
+	    <small class="card-subtitle mb-2 text-muted">{{ result.date }}</small>
+	  </div>
+	</div><br><br>
+</div>
+{% endif %}
+{% empty %}
+<div class="container center-text">
+	<h3>There Are No Notes In Your Account Right Now With This Tag!</h3>
+</div>
+{% endfor %}
+</div>
+{% endblock content %}

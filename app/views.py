@@ -35,3 +35,13 @@ class NoteEditView(LoginRequiredMixin, generic.UpdateView):
 class NoteDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Note
     success_url = reverse_lazy('app:all-notes')
+
+
+def note_search(request):
+    query = request.GET.get('q')
+    queryset = Note.objects.all()
+
+    if query:
+        queryset = queryset.filter(related_tag__icontains=query)
+
+    return render(request, 'app/note_search.html', {'results': queryset})

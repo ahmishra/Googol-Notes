@@ -9,4 +9,5 @@ urlpatterns = [
     path('note/detail/<int:pk>/', v.NoteDetailView.as_view(), name='detail-note'),
     path('note/update/<int:pk>/', v.NoteEditView.as_view(), name='update-note'),
     path('note/delete/<int:pk>/', v.NoteDeleteView.as_view(), name='delete-note'),
+    path('note/search/', v.note_search, name='search-note')
 ]
