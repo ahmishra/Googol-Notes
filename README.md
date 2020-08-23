@@ -1,5 +1,5 @@
 # Googol-Notes
-A Website To Note Down Important Notes(Including Markdown &amp; JS &amp; HTML &amp; CSS). And By The Way Googol Stands for equivalent to ten raised to the power of a hundred (10^100). 
+A Website To Note Down Important Notes(Including Markdown & HTML). And By The Way Googol Stands for equivalent to ten raised to the power of a hundred (10^100). 
 
 
 ### User Manual:
