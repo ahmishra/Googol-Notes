@@ -1,6 +1,6 @@
 /* Basic Setup */
 body {
-	font-family: 'Alata', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	background-color: #202124;
 	color: whitesmoke;
 
@@ -8,27 +8,37 @@ body {
 .container {
 	margin-top: 50px;
 }
-label {
-	font-family: 'Alata', sans-serif;
-}
-p {
-	font-family: 'Alata', sans-serif;
-}
 
 /* Inputs  */
-#id_username, #id_password1, #id_password2, #id_password, #id_title, #id_note, #id_related_tag {
+#id_username, #id_password1, #id_password2, #id_password {
 	background: transparent;
 	border: none;
 	width: 100%;
 	outline: none;
-	color: whitesmoke;
+	color: black;
+	border-bottom: 1px solid darkorchid;
+}
+
+#id_title, #id_note, #id_related_tag {
+	background: transparent;
+	border: none;
+	width: 100%;
+	outline: none;
+	color: white;
 	border-bottom: 1px solid darkorchid;
 }
 
 .btn {
 	font-weight: 900;
 }
-
+a {
+	color: white;
+	color: cornflowerblue;
+}
+a:hover {
+	color: cornflowerblue;
+	text-decoration: underline;
+}
 /* New Note Button */
 .new-note-btn {
 	background: darkorchid;
@@ -51,7 +61,6 @@ p {
 /* Card */
 .card {
 	color: black;
-	font-family: 'Alata' ,sans-serif;
 }
 
 .card-text {
@@ -63,7 +72,6 @@ p {
 
 .center-text {
 	text-align: center;
-	font-family: 'IBM Plex Sans', sans-serif;
 }
 
 img {
