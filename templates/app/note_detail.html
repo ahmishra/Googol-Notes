@@ -13,7 +13,7 @@ Tagged: {{ object.related_tag }}
 <p><br>
 {{ object.note_html|safe|linebreaks }}
 </p>
-<br><hr style="background: white;"><br>
+<hr style="background: gray;">
 <a href="{% url 'app:update-note' pk=object.pk %}" style="color: white"><button class="btn btn-lg btn-outline-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button></a>
 <a href="{% url 'app:delete-note' pk=object.pk %}" style="color: white"><button class="btn btn-lg btn-outline-danger"><i class="fa fa-trash" aria-hidden="true"></i></button></a>
 <br><br>

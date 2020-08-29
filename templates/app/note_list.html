@@ -7,7 +7,7 @@
 {% for object in object_list %}
 	{% if object.user == user %}
 	<div class="col-sm-6">
-		<div class="card">
+		<div class="card" style="box-shadow: none;">
 		  <div class="card-body">
 		    <h5 class="card-title">{{ object.title }}</h5>
 		    <h6 class="card-subtitle mb-2 text-muted">{{ object.related_tag }}</h6><br>

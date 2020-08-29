@@ -1,16 +1,20 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title  %}Googol Notes- Signup Portal{% endblock title  %}
 
 {% block content %}
-<div class="card" style="width: 30rem; margin: auto; width: 50%; padding: 10px;">
+<div class="card" style="width: 25rem; margin: auto; padding: 10px; margin-top: 100px;">
   <div class="card-body">
+  	<img src="{% static 'imgs/favicon.png' %}" class="icon">
+  	<strong style="margin-left: 120px;">Googol Notes</strong><br><br>
     <h5 class="card-title">Not Already A Member? Signup!</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Signup!</h6><br>
+    <h6 class="card-subtitle mb-2 text-muted">Create A Account And Store Your Notes!</h6><br>
     <form method="POST">
     	{% csrf_token %}
     	{{ form.as_p }}
     	<input type="submit" value='Signup' class="btn btn-outline-primary">
+    	<a href="{% url 'accounts:login' %}" style="margin-left: 150px; text-decoration: none;">Login Instead</a>
     </form>
   </div>
 </div>

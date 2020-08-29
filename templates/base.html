@@ -15,12 +15,12 @@
 		<!-- Font Awesome -->
 		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<!-- Favicon -->
-		<link rel="shortcut icon" type="icon/svg" href="https://image.flaticon.com/icons/svg/752/752326.svg">
+		<link rel="shortcut icon" type="icon/svg" href="{% static 'imgs/favicon.png' %}">
 </head>
 <body>
 
 	<!-- Nav -->
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+	<nav class="navbar fixed-top navbar-expand-md navbar-light" id="nav" style="background: rgba(255, 255, 255, 1)">
 	  <a class="navbar-brand" href="{% url 'app:all-notes' %}">Googol Notes</a>
 	    <button class="navbar-toggler" style="outline: none; border: none;" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggler-icon"></span>
@@ -46,4 +46,20 @@
 	</div>
 
 </body>
+
+<script type="text/javascript">
+	const  navShadow = () => {
+    var nav = document.getElementById("nav");
+    var sticky = 70;
+
+    if (window.pageYOffset > sticky) {
+      nav.classList.add("add-shadow");
+    } else {
+      nav.classList.remove("add-shadow");
+    }
+  };
+
+  window.addEventListener("scroll",  navShadow);
+</script>
+
 </html>
