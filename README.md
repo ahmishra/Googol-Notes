@@ -15,9 +15,10 @@ In Your Git Command Line:</br>
 
 ### How-to Run The Code:
 In Your Git Command Line:</br>
-`LOCATION-INSTALLED-CODEL\GoogolNotes>python manage.py migrate`</br>
-`LOCATION-INSTALLED-CODEL\GoogolNotes>python manage.py makemigrations`</br>
-`LOCATION-INSTALLED-CODEL\GoogolNotes>python manage.py runserver`</br></br>
+`LOCATION-INSTALLED-CODE\GoogolNotes>python manage.py migrate`</br>
+`LOCATION-INSTALLED-CODE\GoogolNotes>python manage.py makemigrations`</br>
+`LOCATION-INSTALLED-CODE\GoogolNotes>python manage.py migrate`</br>
+`LOCATION-INSTALLED-CODE\GoogolNotes>python manage.py runserver`</br></br>
 
 
 ### Result
