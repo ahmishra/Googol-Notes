@@ -5,15 +5,16 @@ Googol Notes - {{ object.title }} Details
 {% endblock title %}
 
 {% block content %}
+<br>
 <h2>{{ object.title }} Details</h2>
 Tagged: {{ object.related_tag }}
 
 <p>Date Created: {{ object.date }}</p>
-<hr style="background: gray;">
+<hr style="background: rgba(0, 0, 0, 0.1);">
 <p><br>
 {{ object.note_html|safe|linebreaks }}
 </p>
-<hr style="background: gray;">
+<hr style="background: rgba(0, 0, 0, 0.1);">
 <a href="{% url 'app:update-note' pk=object.pk %}" style="color: white"><button class="btn btn-lg btn-outline-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button></a>
 <a href="{% url 'app:delete-note' pk=object.pk %}" style="color: white"><button class="btn btn-lg btn-outline-danger"><i class="fa fa-trash" aria-hidden="true"></i></button></a>
 <br><br>

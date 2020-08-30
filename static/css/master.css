@@ -20,6 +20,10 @@ body {
 	margin-bottom: 50px;
 }
 
+hr {
+	background: grey;
+}
+
 .icon {
 	display: block;
   margin-left: auto;
@@ -38,7 +42,7 @@ body {
 
 .card {
 	border: 1px solid rgba(0, 0, 0, 0.3);
-	box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, .5);
+	box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, .4);
 }
 
 .btn {
@@ -56,8 +60,7 @@ a:hover {
 .new-note-btn {
 	background: darkorchid;
 	color: white;
-	border-radius: 50px;
-	box-shadow: 0px 0px 20px 5px #000;
+	border-radius: 50px;s
 }
 .new-note-btn:hover {
 	color: white;
@@ -103,8 +106,7 @@ iframe {
 
 /* Scroll Bar */
 ::-webkit-scrollbar {
-  width: 5px;
-  cursor: pointer;
+  width: 7px;
 }
 ::-webkit-scrollbar-track {
   background-color: #fff;
